@@ -1,17 +1,11 @@
 const { Client, Interaction, Message } = require("discord.js");
 const { callback } = require("./dice.js");
 const FileSystem = require("fs");
-const data = require("../../../../../userCash.json");
 const { connectMonggose } = require('../../db.js');
 const userSchema  = require('../../models/userSchema');
 
 connectMonggose();
 
-userCash = [{
-    name: data[0].name,
-    cash: data[0].cash,
-    timer: 0,
-}];
 
 module.exports = {
     /**
